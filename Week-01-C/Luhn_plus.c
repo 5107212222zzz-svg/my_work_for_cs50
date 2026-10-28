@@ -31,11 +31,13 @@ int main ()
    for (int i=0;i<20;i++)
 
    {
-    if(num[i]>0||num[i]<48||num[i]>57)
+    if(num[i]>'\0'&&num[i]<'0'||num[i]>'9')
 
-    printf("Input error");
+    {
+        printf("Input error");
 
     return 1;
+    }
    }
 
    

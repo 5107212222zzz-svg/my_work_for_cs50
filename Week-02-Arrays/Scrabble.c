@@ -3,7 +3,8 @@
 y1s1大肥鱼给出的数组映射，好像是这么叫的
 确定26个字母的分值，然后定义一个新的point数组
 通过ASCII码值（-‘a'）来实现，真的太好了
-不然我就得一个一个输入或的条件，整整26个！*/
+不然我就得一个一个输入或的条件，整整26个！
+不太了解这个游戏可以长度不一样，算了*/
 
 
 #include<string.h>
@@ -31,6 +32,13 @@ int main (void)
 
   scanf("%101s",word1);
 
+  if (strlen(word1)!=n)
+  {
+    printf("The length of word is %d",n);
+
+    return 1;
+  }
+
   
 //检查用户输入全为小写字母
   for (int i=0;i<n;i++)
@@ -45,6 +53,13 @@ int main (void)
   printf("Player 2 ,please enter your word \n");
 
   scanf("%101s",word2);
+
+   if (strlen(word2)!=n)
+  {
+    printf("The length of word is %d",n);
+
+    return 1;
+  }
   //还是得检验一下长度，不然进缓冲区，会给第二个玩家带来麻烦的
  
 
@@ -63,6 +78,11 @@ int main (void)
     //得分
     int score1=score(n,word1);
     int score2=score(n,word2);
+
+    //输出分数
+    printf("Player 1 gets %d\n",score1);
+
+    printf("Player2 gets %d\n",score2);
 
     //比较
     if (score1<score2)
