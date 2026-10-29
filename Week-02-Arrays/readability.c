@@ -17,7 +17,7 @@ int rounds (double a);
 int main (void)
 {
     int letter=0;
-    int word=0;
+    int word=1;//最后一个单词后面不会有空格
     int sent=0;
 
 

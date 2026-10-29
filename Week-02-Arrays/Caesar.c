@@ -23,6 +23,23 @@ int main (int argc,char *argv[])
         return 1;
     }
 
+    int a=strlen(argv[1]);
+
+    for (int i=0;i<a;i++)
+    {
+        if(argv[1][i]<'0'||argv[1][i]>'9')
+        {
+            printf("Key must contain only digits\n");
+
+            return 1;
+        }
+        
+    }
+
+    
+
+    
+
     //一个新函数，atoi将字符转换为整数
     int key =atoi(argv[1]); 
 
@@ -31,10 +48,12 @@ int main (int argc,char *argv[])
 
     printf("Please enter the painttext\n");
 
+    int n=strlen(text);
+
     //输入明文
     fgets(text,sizeof(text),stdin);
 
-    int n=strlen(text);
+    
 
     if(n>102)
     {
