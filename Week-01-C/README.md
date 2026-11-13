@@ -1,6 +1,6 @@
 Forgive me to copy the text of homework
 
-
+ 
 
 Here are the problems tackled this week:
 
